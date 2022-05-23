@@ -34,3 +34,9 @@ uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks
 
 .PHONY: all options clean install uninstall
+
+upstream:
+	git fetch upstream
+	git checkout master
+	git rebase upstream/master
+
